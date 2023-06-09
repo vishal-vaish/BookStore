@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./signin.css"
 import users from "../users.json"
 import { useNavigate } from "react-router"
-import {toast } from "react-toastify";
-import { Button } from "bootstrap";
+import login from '../login.jpg'
 
 
 const SignIn = ({ setUser }) => {
@@ -18,26 +17,21 @@ const SignIn = ({ setUser }) => {
 
   let navigate = useNavigate();
 
-  const showToastMessage=()=>{
-    console.log("admin");
-    toast.success("Login Sucessful!",{
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("loginning")
     users.users.forEach((user) => {
       if (user.username === data.username && user.password === data.password) {
         setUser(data.username);
         if (user.role === "1") {
-          showToastMessage();
-          
+          console.log("admin");
           navigate("/admin", { replace: true });
         } else {
-          showToastMessage();
+          console.log("client");
           navigate("/", { replace: true });
         }
+      } else {
+        alert("For ADMIN login use Admin as username and password, For CLIENT login use Client as username and password");
       }
     }
     )
@@ -88,7 +82,7 @@ const SignIn = ({ setUser }) => {
 
             <div className="sign-button">
 
-              <button type="button" className="btn btn-outline-primary me-3">
+              <button type="submit" className="btn btn-outline-primary me-3">
                 Sign in
               </button>
 

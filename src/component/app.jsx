@@ -14,7 +14,6 @@ import Wishlist from "./wishlist/wishilst";
 import Footer from "./footer/footer";
 import './app.css'
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify";
 
 const App = () => {
 
@@ -143,7 +142,9 @@ const App = () => {
               />
             }
           />
+          
         </Routes>
+          
       </main>
       <Footer />
     </React.Fragment>

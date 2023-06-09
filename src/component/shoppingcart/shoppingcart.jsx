@@ -114,7 +114,9 @@ const ShoppingCart = ({ onIncrement, onDecrement, onDelete }) => {
                 <h6>Total</h6>
                 <h6>{total + 10}$</h6>
               </div>
-              <button className="btn btn-block btn-warning">Proceed To Checkout</button>
+              <button className="btn btn-block btn-warning" onClick={()=>{
+                alert("Order has been Sucessfully placed.");
+              }}>Proceed To Checkout</button>
             </div>
           </div>
         </div>
