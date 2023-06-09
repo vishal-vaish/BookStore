@@ -27,7 +27,7 @@ const Navbar = ({ user, setUser }) => {
     <nav ref={stickyRef} className={sticky ? "sticky navbar navbar-expand-lg  navbar-light shadow" :  "navbar navbar-expand-lg  navbar-light shadow"}>
       <div className="container d-flex justify-content-between align-items-center">
         <Link className="navbar-brand text-danger logo h1 align-self-center" to={"/"}>
-          Online<span className="text-black">BookShop</span>
+          Online<span className="text-black">BookStore</span>
         </Link>
 
         <div className="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
